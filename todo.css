@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    margin-left: 40%;
+    margin-top: 30px;
+    background-color: rgb(219, 46, 133);
+    display: inline-block;
+    border-radius: 2rem;
+
+}
+
+/*body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #151515;
+    color: white;
+}*/
+
+.circle1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #fe4425;
+    border-top: 3px solid rgb(48, 101, 199);
+    animation: ani 3s linear infinite;
+}
+
+.circle2 {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #fee824;
+    border-top: 3px solid rgb(79, 54, 192);
+    animation: ani 3s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+button {
+    align-items: center;
+    justify-content: center;
+    margin-left: 50rem;
+    margin-top: 3rem;
+    width: 110px;
+    height: 80px;
+    background-color: cyan;
+    border: none;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+}
+
+button:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+h1 {
+    width: max-content;
+    font-size: 72px;
+    position: relative;
+    cursor: pointer;
+    margin: 100px auto;
+
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: #000;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+h1:hover::after {
+    transform: scaleX(1);
+
+}
+
+
+#container {
+    text-align: center;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 15%;
+    display: block;
+}
+
+#flip {
+    height: 50px;
+    overflow: hidden;
+}
+
+#flip>div>div {
+    color: #fff;
+    padding: 4px 12px;
+    height: 45px;
+    margin-bottom: 45px;
+    display: inline-block;
+}
+
+#flip div:first-child {
+    animation: show 5s linear infinite;
+}
+
+#flip div div {
+    background-color: #42c58a;
+}
+
+#flip div:first-child div {
+    background: #4ec7f3;
+}
+
+#flip div:last-child div {
+    background: #DC143c;
+}
+
+@keyframes show {
+    0% {
+        margin-top: -270px;
+
+    }
+
+    5% {
+        margin-top: -180px;
+    }
+
+    33% {
+        margin-top: -180px;
+    }
+
+    38% {
+        margin-top: -90px;
+    }
+
+    66% {
+        margin-top: -90px;
+    }
+
+    71% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+
+    100% {
+        margin-top: -270px;
+
+    }
+}
